@@ -137,6 +137,12 @@ require('yargs')
             type: 'number',
             describe: 'Timeout between requests. Timeout is set in mls: 1000 mls = 1 second',
         },
+        proxy: {
+            alias: 'p',
+            default: [],
+            type: 'array',
+            describe: 'List of proxies as <IP_ADDRESS:PORT>',
+        },
     })
     .check((argv) => {
         if (['products', 'reviews', 'asin', 'categories', 'countries'].indexOf(argv['_'][0]) === -1) {
